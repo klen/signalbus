@@ -35,7 +35,7 @@ repos:
 
     - id: ruff
       name: ruff
-      entry: poetry run ruff homa
+      entry: poetry run ruff signalbus
       language: system
       pass_filenames: false
 

@@ -2,10 +2,11 @@ from __future__ import annotations
 
 from inspect import isasyncgenfunction, isgeneratorfunction
 from logging import INFO, getLogger
-from typing import TYPE_CHECKING, Any, Generic, ParamSpec, overload
+from typing import TYPE_CHECKING, Any, Generic, List, overload, Tuple
+from typing_extensions import ParamSpec
 
 if TYPE_CHECKING:
-    from collections.abc import AsyncGenerator, Callable, Generator
+    from typing import AsyncGenerator, Callable, Generator
 
 logger = getLogger("signals")
 logger.setLevel(INFO)
@@ -19,7 +20,7 @@ class BaseSignal(Generic[P]):
     def __init__(self, genfn: Callable[P, Any]):
         self._name = genfn.__name__
         self._genfn = genfn
-        self._callbacks: list[tuple[Callable[P, Any], tuple]] = []
+        self._callbacks: List[Tuple[Callable[P, Any], Tuple]] = []
 
     def register(self, *args) -> Callable[[Callable[P, Any]], Any]:
         if args and callable(args[0]):

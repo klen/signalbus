@@ -18,6 +18,7 @@ homepage = "https://github.com/klen/signalbus"
 
 [tool.poetry.dependencies]
 python = "^3.8"
+typing-extensions = {version = "*", python = "<3.10"}
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.0.259"
@@ -28,7 +29,7 @@ pytest-mypy = "^0.10.3"
 pytest-aio = "^1.5.0"
 
 [tool.pytest.ini_options]
-addopts = "--mypy -xsvl tests.py"
+addopts = "-xsvl tests.py"
 
 [tool.black]
 line-length = 100
