@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "signalbus"
+version = "0.1.1"
+description = "Simple and small library to broadcast signals with typing support"
+authors = ["Kirill Klenov <horneds@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+keywords = ["signal", "emit", "events", "broadcast"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Libraries",
+]
+homepage = "https://github.com/klen/signalbus"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.259"
+black = "^23.1.0"
+pre-commit = "*"
+pytest = "^7.2.2"
+pytest-mypy = "^0.10.3"
+pytest-aio = "^1.5.0"
+
+[tool.pytest.ini_options]
+addopts = "--mypy -xsvl tests.py"
+
+[tool.black]
+line-length = 100
+target-version = ["py38", "py39", "py310", "py311"]
+preview = true
+
+[tool.mypy]
+packages = ["signalbus"]
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py38"
+exclude = [".venv"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
