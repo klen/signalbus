@@ -2,6 +2,8 @@
 
 Simple and small library to broadcast signals with typing support
 
+[![Tests Status](https://github.com/klen/signalbus/workflows/tests/badge.svg)](https://github.com/klen/signalbus/actions)
+
 Features:
 
 * Async support
