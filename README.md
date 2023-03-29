@@ -29,7 +29,7 @@ from signalbus import create_signal
 # Just define a (generator) function and wrap it with `signalbus.create_signal`
 
 @create_signal
-def order_changed(order_status: str, *, order_id: int):  # 
+def order_changed(order_status: str, *, order_id: int):  #
     """
     The function contains the signal code.
     Feel free to do some operations before and after the sending.
@@ -39,7 +39,7 @@ def order_changed(order_status: str, *, order_id: int):  #
     Typing libraries will show you errors.
     """
     # first, you have to get `emit` to be able to send the signal
-    emit = yield   
+    emit = yield
 
     # then send the signal to the receivers (you may want to skip it in some cases)
     res: list = emit(order_status, order_id=order_id)
@@ -156,7 +156,7 @@ the issue tracker at https://github.com/klen/signalbus/issues
 
 ## Contributing
 
-Development of The Knocker happens at: https://github.com/klen/signalbus
+Development of The library happens at: https://github.com/klen/signalbus
 
 
 ##  License
