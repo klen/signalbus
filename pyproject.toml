@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "signalbus"
-version = "0.1.1"
+version = "0.2.0"
 description = "Simple and small library to broadcast signals with typing support"
 authors = ["Kirill Klenov <horneds@gmail.com>"]
 license = "MIT"
