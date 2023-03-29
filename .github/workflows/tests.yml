@@ -5,10 +5,10 @@ name: tests
 
 on:
   pull_request:
-    branches: [master, develop]
+    branches: [main, develop]
 
   push:
-    branches: [master, develop]
+    branches: [main, develop]
 
 jobs:
 
@@ -56,4 +56,3 @@ jobs:
           slack-bot-user-oauth-access-token: ${{ secrets.SLACK_BOT_TOKEN }}
           slack-optional-as_user: false
           slack-optional-icon_emoji: ":white_check_mark:"
-
