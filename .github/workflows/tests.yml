@@ -35,7 +35,7 @@ jobs:
       run: poetry install --with dev
 
     - name: Check code
-      run: poetry run ruff
+      run: poetry run ruff signalbus
 
     - name: Check typing
       run: poetry run mypy
