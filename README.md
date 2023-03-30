@@ -2,7 +2,8 @@
 
 Simple and small library to broadcast signals with typing support
 
-[![Tests Status](https://github.com/klen/signalbus/workflows/tests/badge.svg)](https://github.com/klen/signalbus/actions)
+[![Tests Status](https://github.com/klen/signalbus/workflows/tests/badge.svg)](https://github.com/klen/signalbus/actions/workflows/tests.yml)
+[![Publish Status](https://github.com/klen/signalbus/workflows/publish/badge.svg)](https://github.com/klen/signalbus/actions/workflows/publish.yml)
 
 Features:
 
