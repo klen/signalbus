@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from inspect import isasyncgenfunction, isgeneratorfunction
-from logging import INFO, getLogger
+from logging import getLogger
 from typing import TYPE_CHECKING, Any, Generic, List, overload, Tuple
 from typing_extensions import ParamSpec
 
@@ -9,7 +9,6 @@ if TYPE_CHECKING:
     from typing import AsyncGenerator, Callable, Generator
 
 logger = getLogger("signals")
-logger.setLevel(INFO)
 
 P = ParamSpec("P")
 
